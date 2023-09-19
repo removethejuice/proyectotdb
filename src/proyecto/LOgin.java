@@ -126,11 +126,16 @@ public class LOgin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Porfavor ingrese un nombre de usuario");
         } else if (jPasswordField1.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Porfavor ingrese la contraseña");
-        } else if (jTextField3.getText().contains("Diego") && jPasswordField1.getText().contains("123")) {
+        } else if (jTextField3.getText().equals("Diego") && jPasswordField1.getText().equals("123")) {
             JOptionPane.showMessageDialog(null, "Bienvenido");
             this.setVisible(false);
             Principal_GUI p = new Principal_GUI();
             p.setVisible(true);
+        }
+        else {
+        JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecta");
+        jTextField3.setText("");
+        jPasswordField1.setText("");
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
